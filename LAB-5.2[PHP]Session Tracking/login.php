@@ -31,7 +31,7 @@
         <input name="remember" type="checkbox">Remember Me
         <br/><br/>
         <input type="submit" value="Submit" name="submit">        
-        <a href="forgot_password.html">Forgot Password?</a>
+        <a href="forgot_password.php">Forgot Password?</a>
     </form>
 </fieldset>
 

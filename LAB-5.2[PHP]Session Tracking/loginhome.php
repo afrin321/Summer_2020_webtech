@@ -7,9 +7,9 @@
 			<td size="100%"></td>
 			<td align="right">Logged in as 
                 <?php 
-				$profilename = $_COOKIE['userName'];
+				$profilename = $_COOKIE['name'];
 				echo " $profilename"
-				?> | <a href="">Logout</a>
+				?> | <a href="logout.php">Logout</a>
 			</td>
 		</tr>
 	</table>
@@ -30,21 +30,20 @@
 				<li><a href="viewprofile.php"> View Profile</a></li>
 				<li><a href="edit_profile.php"> Edit Profile</a></li>
 				<li><a href="changeprofilepicture.php"> Change Profile Picture</a></li>
-				<li><a href=""> Change Password</a></li>
-				<li><a href=""> Logout</a></li>
+				<li><a href="changepassword.php"> Change Password</a></li>
+				<li><a href="logout.php"> Logout</a></li>
 			</ul>
 							</td>
 			<td>
-<fieldset>
-    <legend><b>FORGOT PASSWORD</b></legend>
-    <form action="email_check.php" method="post">
-		Enter Email:
-        <input type="text" name="email" />
-        <hr />
-        <input type="submit" value="Submit" name="submit" />
-    </form>
-</fieldset>
-
+				<h1>
+					Welcome 
+					<?php 
+				$profilename = $_COOKIE['name'];
+				echo "$profilename"
+				?>
+					
+				</h1>
+			</br>
 			</td>
 	
 </tr>

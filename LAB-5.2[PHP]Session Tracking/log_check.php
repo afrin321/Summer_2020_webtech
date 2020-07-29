@@ -13,7 +13,7 @@
 				if($username == $_COOKIE['userName'] && $password == $_COOKIE['password']){
 					
 					setcookie('status', "OK", time()+3600, '/');
-					header('location: home.php');
+					header('location: loginhome.php');
 
 				}else{
 					header('location: login.php?msg=invalid_username/password');

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
@@ -7,13 +6,15 @@
 		<tr>
 			<td><img src="logo.png"></td>
 			<td size="50%"></td>
-			<td align="right"><a href="home.php">Home |</a>  <a href="login.html"> Login |</a>  <a href="registration.html"> Registration </a>
+			<td align="right"><a href="home.php">Home |</a>  <a href="login.php"> Login |</a>  <a href="reg.php"> Registration </a>
 </td>
 		</tr>
 	</table>
-</head>
+</head> 
 <body>
-	<fieldset>
+
+
+<fieldset>
     <legend><b>REGISTRATION</b></legend>
 	<form action="regcheck.php" method="post">
 		<br/>
@@ -60,9 +61,9 @@
 				<td colspan="3">
 					<fieldset>
 						<legend>Gender</legend>    
-						<input name="gender" type="radio">Male
-						<input name="gender" type="radio">Female
-						<input name="gender" type="radio">Other
+						<input name="gender" type="radio" value="male">Male
+						<input name="gender" type="radio" value="female">Female
+						<input name="gender" type="radio" value="other">Other
 					</fieldset>
 				</td>
 				<td></td>
@@ -86,6 +87,14 @@
 		<input type="reset">
 	</form>
 </fieldset>
+
+
+
+
+
+</table>
+
+
 </body>
-<footer align="center">Copyright @ 2017</footer>
+<footer align="center">Copyright @ 2017</footer> 
 </html>

@@ -2,23 +2,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<img src="logo.png">
-
-<a href="home.php">Home |</a>  <a href="login.html"> Login |</a>  <a href="registration.html"> Registration </a>
-
-
-
+	<table>
+		<tr>
+			<td><img src="logo.png"></td>
+			<td size="50%"></td>
+			<td align="right"><a href="home.php">Home |</a>  <a href="login.php"> Login |</a>  <a href="reg.php"> Registration </a>
+</td>
+		</tr>
+	</table>
 </head>
 <body>
-	<table border="1">
-		<tr>
-	<h1>Welcome to XCompany</h1></br>
-</tr>
+<table border="1">
+
+<h2>Welcome to XCompany</h2>		
 
 
-	</table>
 
 
+
+
+
+</table>
 </body>
-<footer>Copyright @ 2017</footer>
+<footer align="center">Copyright @ 2017</footer>
 </html>

@@ -18,23 +18,6 @@
 
 </head>
 <body>
-	<table >
-		<tr>
-			<td>
-				<h3>Account</h3>
-				<hr />
-
-				<ul>
-
-				<li><a href="loginhome.php"> Dashboard</a></li>
-				<li><a href="viewprofile.php"> View Profile</a></li>
-				<li><a href="edit_profile.php"> Edit Profile</a></li>
-				<li><a href="changeprofilepicture.php"> Change Profile Picture</a></li>
-				<li><a href=""> Change Password</a></li>
-				<li><a href=""> Logout</a></li>
-			</ul>
-							</td>
-			<td>
 <fieldset>
     <legend><b>FORGOT PASSWORD</b></legend>
     <form action="email_check.php" method="post">
@@ -45,12 +28,6 @@
     </form>
 </fieldset>
 
-			</td>
-	
-</tr>
-
-
-	</table>
 
 
 </body>
