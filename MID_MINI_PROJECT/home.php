@@ -45,7 +45,7 @@ $name = $_SESSION['user_name'];
 								
 						</tr>
 						<tr>
-							<td><a href="">Logout</a> </td>
+							<td><a href="logout.php">Logout</a> </td>
 						</tr>
 					</table>
 
