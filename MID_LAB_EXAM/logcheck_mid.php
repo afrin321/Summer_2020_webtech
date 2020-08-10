@@ -16,8 +16,13 @@
 				$user = explode('|', $data);
 				if($uid == trim($user[0]) && $password == trim($user[1])){
 					$_SESSION['status'] = "OK";
+					$_SESSION['uid'] = trim($user[0]);
+					$_SESSION['pw'] = trim($user[1]);
+					$_SESSION['em'] = trim($user[4]);
+					$_SESSION['user_type'] = trim($user[5]);
+					$_SESSION['user_name'] = trim($user[3]);
 					
-					header('location: home.html');
+					header('location: home.php');
 				}
 			}
 
