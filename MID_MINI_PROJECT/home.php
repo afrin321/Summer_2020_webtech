@@ -37,7 +37,12 @@ $name = $_SESSION['user_name'];
 							<td><a href="changepassword.php">Change Password</a> </td>
 						</tr>
 						<tr>
-							<td><a href="">View Users</a> </td>
+							<td><?php 
+							if($type=="admin"){
+								echo '<a href="viewuser.php">View Users</a>';
+							}
+							 ?>
+								
 						</tr>
 						<tr>
 							<td><a href="">Logout</a> </td>
