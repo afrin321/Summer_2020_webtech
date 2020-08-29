@@ -129,4 +129,16 @@ var f2 = function(){
 	}
 }
 
+var f3 = function(){
+	document.getElementById("userMsg").innerHTML = "";
+	document.getElementById("emailMsg").innerHTML = "";
+	document.getElementById("genderMsg").innerHTML = "";
+	document.getElementById("dobMsg").innerHTML = "";
+	document.getElementById("bgMsg").innerHTML = "";
+	document.getElementById("degMsg").innerHTML = "";
+	
+
+}
+
+
 
