@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Example</title>
+	<title>HTML Forms</title>
 </head>
 <body>
-	<h1>JS Example</h1>
+	<h1></h1>
 
-	<form action="abc.php" onsubmit="return f1()" >
-		<table>
+	<form action="abc.php" onsubmit="return f1()" enctype="multipart/form-data">
+		<table border="1">
+			<tr>
+					<td colspan="3"><center><h2>PERSON PROFILE</center></h2></td>
+			</tr>
 			<tr>
 				<td>Username</td>
 				<td><input type="text" id="username" name="username" onkeyup="f2()"></td>
@@ -45,6 +48,14 @@
 				<td>Degree</td>
 				<td><input type="checkbox" value="ssc" name="s_degree" id="ssc" onclick="f2()"> SSC <input type="checkbox" value="hsc" name="s_degree" id="hsc" onclick="f2()"> HSC <input type="checkbox" value="bsc" name="s_degree" id="bsc" onclick="f2()"> BSC. <input type="checkbox" value="msc" name="s_degree" id="msc" onclick="f2()"> MSC.</td>
 				<td id="degMsg"></td>
+			</tr>
+			<tr>
+				<td>Photo</td>
+				<td><input type="file" name="fileToUpload" id="photo" value="Browse"></td>
+				<?php $dir= "image/";
+				move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $dir)
+				?>
+				<td></td>
 			</tr>
 						
 			<tr>

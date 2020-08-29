@@ -22,6 +22,7 @@ function f1(){
 	var hdeg = document.getElementById('hsc').checked;
 	var bdeg = document.getElementById('bsc').checked;
 	var mdeg = document.getElementById('msc').checked;
+	//var photo = document.getElementById('photo').value;
 	
 	var error = false;
 	if(username == ""){
@@ -45,8 +46,24 @@ function f1(){
 		document.getElementById('genderMsg').innerHTML = "Please select gender!";
 		error = true;
 	}
-	if ((day = "") ||  (month == "") || (year == "")) {
+	if ((day == "") ||  (month == "") || (year == "")) {
 		document.getElementById('dobMsg').innerHTML = "DOB can't be empty!";
+		error = true;
+	}
+	if (((day != "") && (typeof day != 'number')) || ((month != "") && (typeof month != 'number')) || ((year != "") && (typeof year != 'number'))){
+		document.getElementById('dobMsg').innerHTML = "Date must be numeric!";
+		error= true;
+	}
+	if (((day<1) || (day>31)) && (day != "") && (typeof day != 'number')){
+		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
+		error = true;
+	}
+	if (((month<1) || (month>12)) && (month != "") && (typeof month != 'number')){
+		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
+		error = true;
+	}
+	if (((year<1920) || (year>2020)) && (year != "") && (typeof year != 'number')){
+		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
 		error = true;
 	}
     if (bg == "") {
@@ -58,6 +75,7 @@ function f1(){
 		document.getElementById('degMsg').innerHTML = "Please select degree!";
 		error = true;
 	}
+
 
 
 
