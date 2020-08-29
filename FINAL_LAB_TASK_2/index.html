@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Example</title>
+</head>
+<body>
+	<h1>JS Example</h1>
+
+	<form action="abc.php" onsubmit="return f1()" >
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" id="username" name="username" onkeyup="f2()"></td>
+				<td id="userMsg"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="mail" id="email" onkeyup="f2()"></td>
+				<td id="emailMsg"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="Male" id="Gender_male" onclick="f2()"> Male <input type="radio" name="gender" value="Female" id="Gender_female" onclick="f2()"> Female <input type="radio" name="gender" value="Other" id="Gender_other" onclick="f2()"> Other</td>
+				<td id="genderMsg"></td>
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td><input type="text" name="" id="day" onkeyup="f2()">/<input type="text" name="" id="month" onkeyup="f2()">/<input type="" name="" id="year" onkeyup="f2()">(dd/mm/yyyy)</td>
+				<td id="dobMsg"></td>
+			</tr>
+			<tr>
+				<td>Blood Group</td>
+				<td><select name="s_bloodgroup" id="bgroup" onclick="f2()">
+					<option value=""></option>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
+				</select></td>
+				<td id="bgMsg"></td>
+			</tr>
+			<tr>
+				<td>Degree</td>
+				<td><input type="checkbox" value="ssc" name="s_degree" id="ssc" onclick="f2()"> SSC <input type="checkbox" value="hsc" name="s_degree" id="hsc" onclick="f2()"> HSC <input type="checkbox" value="bsc" name="s_degree" id="bsc" onclick="f2()"> BSC. <input type="checkbox" value="msc" name="s_degree" id="msc" onclick="f2()"> MSC.</td>
+				<td id="degMsg"></td>
+			</tr>
+						
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Submit"> <input type="reset" name="" value="Reset" ></td>
+				<td></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
