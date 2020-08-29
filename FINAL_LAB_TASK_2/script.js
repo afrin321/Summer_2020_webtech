@@ -26,7 +26,7 @@ function f1(){
 	
 	var error = false;
 	if(username == ""){
-		document.getElementById('userMsg').innerHTML = "Username Can't left empty!";
+		document.getElementById('userMsg').innerHTML = "Username cannot be left empty!";
 		error = true;
 	}
 	if ((username != "") && (username.search(" ") == -1)) {
@@ -34,7 +34,7 @@ function f1(){
 		error = true;
 	}
 	if(email == ""){
-		document.getElementById('emailMsg').innerHTML = "Email Can't left empty!";
+		document.getElementById('emailMsg').innerHTML = "Email cannot be left empty!";
 		error =true;
 	}
 	if ((email != "") && ((email.search("@") == -1) || (email.search(".")==-1))) {
@@ -50,24 +50,32 @@ function f1(){
 		document.getElementById('dobMsg').innerHTML = "DOB can't be empty!";
 		error = true;
 	}
-	if (((day != "") && (typeof day != 'number')) || ((month != "") && (typeof month != 'number')) || ((year != "") && (typeof year != 'number'))){
+	if ((day != "") && (typeof day == 'number')){
 		document.getElementById('dobMsg').innerHTML = "Date must be numeric!";
-		error= true;
+		error = true;
 	}
-	if (((day<1) || (day>31)) && (day != "") && (typeof day != 'number')){
+	if ((month != "") && (typeof month == 'number')) {
+		document.getElementById('dobMsg').innerHTML = "Date must be numeric!";
+		error = true;
+	}
+	if ((year != "") && (typeof year == 'number')) {
+		document.getElementById('dobMsg').innerHTML = "Date must be numeric!";
+		error = true;
+	}
+	if (((day<1) || (day>31)) && (day != "") && (typeof day == 'number')){
 		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
 		error = true;
 	}
-	if (((month<1) || (month>12)) && (month != "") && (typeof month != 'number')){
+	if (((month<1) || (month>12)) && (month != "") && (typeof month == 'number')){
 		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
 		error = true;
 	}
-	if (((year<1920) || (year>2020)) && (year != "") && (typeof year != 'number')){
+	if (((year<1920) || (year>2020)) && (year != "") && (typeof year == 'number')){
 		document.getElementById('dobMsg').innerHTML = "Date range not correct!";
 		error = true;
 	}
     if (bg == "") {
-    	document.getElementById('bgMsg').innerHTML = "Blood group can't be empty";
+    	document.getElementById('bgMsg').innerHTML = "Blood group can't be empty!";
     	error = true;
     }
     if((sdeg==false) && (hdeg==false) && (bdeg==false) && (mdeg==false))
@@ -83,6 +91,7 @@ function f1(){
 	if(error){
 		return false;
 	}else{
+		alert("Validation Success!");
 		return true;
 	}
 	
