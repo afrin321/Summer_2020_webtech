@@ -3,7 +3,7 @@
 	require_once('../service/userService.php');
 
 	if (isset($_POST['name'])) {
-		echo "hii";
+		//echo "hii";
 		$users = getAllUser();
 
 		$d = "	<table border=1> 
@@ -26,7 +26,7 @@
 					<a href=\"delete.php?id={$users[$i]['id']}\"> Delete</a> 
 
 				</td>
-			</tr>"
+			</tr>";
 		}
 
 			$d .= "</table>";
