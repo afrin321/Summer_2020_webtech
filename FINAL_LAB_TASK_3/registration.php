@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	<fieldset>
+    <legend><b>REGISTRATION</b></legend>
+	<form>
+		<br/>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>Id</td>
+				<td>:</td>
+				<td><input name="id" type="text" id="uid"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td>
+					<input name="password" type="password" id="up">
+					
+				</td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td>:</td>
+				<td><input name="confirmpassword" type="password" id="ucp"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><input name="name" type="text" id="un"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Email</td>
+				<td>:</td>
+				<td><input name="email" type="text" id="ue"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">User Type: [User/Admin]
+				<select name="usertype" id="ut">
+					<option value="user">User</option>
+					<option value="admin">Admin</option>
+				</select>
+
+				</td>
+				<td></td>
+			</tr>	
+			<tr>
+				<td>
+					<input type="button" value="Register" name="submit" onclick="ajax()"> 
+				</td>
+				<td id="log">
+					<a href="login.html" >Login</a>
+				</td>
+			</tr>	
+
+		</table>
+		<hr/>
+		<div id="data"></div>
+
+
+
+	
+	</form>
+</fieldset>
+		<script type="text/javascript">
+
+			document.getElementById('log').style.display = "none";
+
+					function ajax(){
+						var i = document.getElementById("uid").value;
+						var p = document.getElementById("up").value;
+						var cp = document.getElementById("ucp").value;
+						var n = document.getElementById("un").value;
+						var e = document.getElementById("ue").value;
+						var t = document.getElementById("ut").value;
+
+
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "regcheck_mid.php", true);
+		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		//xhttp.send("fname=Henry&lname=Ford"); 
+		xhttp.send("id="+i+"&password="+p+"&confirmpassword="+cp+"&name="+n+"&email="+e+"&usertype="+t); 
+
+		//document.getElementById('data').innerHTML = this.statusText;
+
+		xhttp.onreadystatechange = function()
+		{
+			document.getElementById('data').innerHTML =  this.statusText;
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					document.getElementById('log').style.display = "block"; 
+					document.getElementById('data').innerHTML =  this.responseText;
+					//document.getElementById('un').innerHTML = u;
+
+				}
+			}
+
+		}
+
+	}
+
+
+			
+		</script>
+</body>
+
+</html>
