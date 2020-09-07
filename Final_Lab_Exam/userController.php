@@ -25,19 +25,25 @@
 
 	//edit new user
 	if(isset($_POST['update'])){
+		$ename = $_POST['empname'];
+		$cname = $_POST['compname'];
+		$contact = $_POST['contno'];
 		$username 	= $_POST['username'];
 		$password 	= $_POST['password'];
-		$email 		= $_POST['email'];
-		$id 		= $_POST['id'];
+		$id = $_POST['id'];
+		
 
-		if(empty($username) || empty($password) || empty($email)){
+		if(empty($username) || empty($password) || empty($ename) || empty($cname) || empty($contact)){
 			header('location: ../views/edit.php?id='.$id);
 		}else{
 			$user = [
+
+				'empname' =>$ename,
+				'compname' =>$cname,
+				'contno' =>$contact,
 				'username'	=>$username,
 				'password'	=>$password,
-				'email'		=>$email,
-				'id'		=>$id
+				
 
 			];
 

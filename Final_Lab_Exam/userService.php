@@ -105,7 +105,18 @@
 
 	function update($user){
 		$con = dbConnection();
-		$sql = "update empinfo set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where id={$user['id']}";
+		$sql = "update empinfo set emp_name='{$user['empname']}', comp_name='{$user['compname']}', contactno='{$user['contno']}', username='{$user['username']}', password='{$user['password']}' where id={$user['id']}";
+
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+		function delete($user){
+		$con = dbConnection();
+		$sql = "delete from empinfo set where id={$user['id']}";
 
 		if(mysqli_query($con, $sql)){
 			return true;

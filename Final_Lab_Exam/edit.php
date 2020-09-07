@@ -24,6 +24,18 @@
 			<legend>Edit User</legend>
 			<table>
 				<tr>
+					<td>Empname</td>
+					<td><input type="text" name="username" value="<?=$user['empname']?>"></td>
+				</tr>
+				<tr>
+					<td>CompName</td>
+					<td><input type="text" name="username" value="<?=$user['compname']?>"></td>
+				</tr>
+				<tr>
+					<td>ContactNo</td>
+					<td><input type="text" name="username" value="<?=$user['contno']?>"></td>
+				</tr>
+				<tr>
 					<td>username</td>
 					<td><input type="text" name="username" value="<?=$user['username']?>"></td>
 				</tr>
@@ -31,10 +43,7 @@
 					<td>Password</td>
 					<td><input type="password" name="password" value="<?=$user['password']?>"></td>
 				</tr>
-				<tr>
-					<td>Email</td>
-					<td><input type="email" name="email" value="<?=$user['email']?>"></td>
-				</tr>
+
 				<tr>
 					<td></td>
 					<td>
