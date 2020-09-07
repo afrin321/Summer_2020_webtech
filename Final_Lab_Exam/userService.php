@@ -103,6 +103,20 @@
 		}
 	}
 
+	function createjob($user){
+		$con = dbConnection();
+		//$check = "select COUNT(email) from users where email={$user['email']}";
+
+		$sql = "insert into jobs values( '', '{$user['cname']}' ,'{$user['title']}' ,'{$user['location']}', '{$user['salary']})";
+
+
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	function update($user){
 		$con = dbConnection();
 		$sql = "update empinfo set emp_name='{$user['empname']}', comp_name='{$user['compname']}', contactno='{$user['contno']}', username='{$user['username']}', password='{$user['password']}' where id={$user['id']}";

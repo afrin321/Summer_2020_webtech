@@ -10,9 +10,9 @@
 <body>
 	<h1>Welcome home <?=$_SESSION['username']?></h1>
 
-	<a href="create.php"> Create New User</a> |
-	<a href="#" onclick="ulist()" id="mylink"> User List</a> |
-	<a href="#" onclick="SearchUserInterface()" id="searchlink"> Search User</a> |
+	<a href="create.php"> Create Job</a> |
+	<a href="#"> Update Job</a> |
+	<a href="#">Delete User</a> |
 	<a href="../php/logoutController.php"> logout</a>
 
 

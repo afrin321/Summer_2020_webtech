@@ -16,7 +16,7 @@
 	<a href="../php/logoutController.php"> logout</a>
 
 
-			<div id="namedata"> Name <input type="text" name="n" onblur="searchUser()" id="name_val"> </div>
+			<div id="namedata"> Name <input type="text" name="n" onkeyup="searchUser()" id="name_val"> </div>
 
 
 	

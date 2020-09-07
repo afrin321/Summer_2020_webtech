@@ -56,5 +56,28 @@
 		}	
 	}
 
+		if(isset($_POST['addjob'])){
+		$compname 	= $_POST['cname'];
+		$title 	= $_POST['title'];
+		$location 		= $_POST['location'];
+		$salary 		= $_POST['salary'];
+		if(empty($cname) || empty($title) || empty($location) || empty($salary)){
+			header('location: ../views/create.php?error=null');
+		}else{
+			$user = [
+				'cname'	=>$compname,
+				'title'	=>$title,
+				'location'		=>$location,
+				'salary' => $salary,
+			];
+			$status = create($user);
+			if($status){
+				header('location: ../views/user_list.php?msg=success');
+			}else{
+				header('location: ../views/create.php?error=dberror');
+			}
+		}	
+	}
+
 
 ?>

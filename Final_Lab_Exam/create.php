@@ -17,24 +17,28 @@
 <body>
 	<form action="../php/userController.php" method="post">
 		<fieldset>
-			<legend>Create New User</legend>
+			<legend>Create New Job</legend>
 			<table>
 				<tr>
-					<td>username</td>
-					<td><input type="text" name="username"></td>
+					<td>Company name</td>
+					<td><input type="text" name="cname"></td>
 				</tr>
 				<tr>
-					<td>Password</td>
-					<td><input type="password" name="password"></td>
+					<td>Job title</td>
+					<td><input type="text" name="title"></td>
 				</tr>
 				<tr>
-					<td>Email</td>
-					<td><input type="email" name="email"></td>
+					<td>Job location</td>
+					<td><input type="text" name="location"></td>
+				</tr>
+				<tr>
+					<td>Salary</td>
+					<td><input type="text" name="email"></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<input type="submit" name="create" value="Create">
+						<input type="submit" name="addjob" value="Create">
 						<a href="home.php">Back</a>
 					</td>
 				</tr>
