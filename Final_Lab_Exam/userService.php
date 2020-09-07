@@ -74,6 +74,21 @@
 		}
 	}
 
+	function adminCheck ($user){
+		$con = dbConnection();
+		$sql = "select * from empinfo where username='{$user['username']}' and password='{$user['password']}' and type='admin'";
+
+		$result = mysqli_query($con, $sql);
+		$row = mysqli_fetch_assoc($result);
+
+		if(count($row) > 0){
+			return true;
+		}else{
+			return false;
+		}
+
+	}
+
 	function create($user){
 		$con = dbConnection();
 		//$check = "select COUNT(email) from users where email={$user['email']}";

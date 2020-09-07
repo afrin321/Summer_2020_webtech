@@ -18,10 +18,19 @@
 			];
 
 			$status = validate($user);
+			$adCheck = adminCheck($user);
 
 			if($status){
+				if($adCheck){
+					$_SESSION['username'] = $username;
+					header('location: ../views/adminhome.php');
+
+				}
+				else
+				{
 				$_SESSION['username'] = $username;
 				header('location: ../views/home.php');
+			}
 			}else{
 				header('location: ../views/login.php?error=invalid');
 			}
