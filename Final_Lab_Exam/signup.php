@@ -69,7 +69,7 @@
 		xhttp.open("POST", "../php/signupController.php", true);
 		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		//xhttp.send("fname=Henry&lname=Ford"); 
-		xhttp.send("""username="+u+"&password="+p+"&email="+e); 
+		xhttp.send("ename="+ename+"&compname="+cname+"&contact="+cont+"&username="+username+"&password="+password); 
 
 		//document.getElementById('data').innerHTML = this.statusText;
 

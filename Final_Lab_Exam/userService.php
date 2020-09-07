@@ -78,7 +78,7 @@
 		$con = dbConnection();
 		//$check = "select COUNT(email) from users where email={$user['email']}";
 
-		$sql = "insert into empinfo values('', '{$user['username']}', '{$user['password']}', '{$user['email']}', 'user')";
+		$sql = "insert into empinfo values( '', '{$user['empname']}' ,'{$user['compname']}' ,'{$user['contno']}', '{$user['username']}', '{$user['password']}', 'employee')";
 
 
 		if(mysqli_query($con, $sql)){
